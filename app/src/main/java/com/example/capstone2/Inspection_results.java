@@ -14,9 +14,9 @@ import org.w3c.dom.Text;
 
 public class Inspection_results extends AppCompatActivity
 {
-    private Button QRscan_stop;
-    private Button Join_link;
-    private TextView link;
+    Button QRscan_stop;
+    Button Join_link;
+    TextView link;
 
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -29,22 +29,22 @@ public class Inspection_results extends AppCompatActivity
         Join_link= (Button)findViewById(R.id.join_site);
         link.setText(text);
 
-//        QRscan_stop.setOnClickListener(new View.OnClickListener()
-//        {
-//            @Override
-//            public void onClick(View v)
-//            {
-//
-//            }
-//        });
-//        Join_link.setOnClickListener(new View.OnClickListener()
-//        {
-//            @Override
-//            public void onClick(View v)
-//            {
-//                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(text));                      //qr주소를 인터넷으로 연결
-//                startActivity(intent);
-//            }
-//        });
+        QRscan_stop.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+
+            }
+        });
+        Join_link.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(text));                      //qr주소를 인터넷으로 연결
+                startActivity(intent);
+            }
+        });
     }
 }

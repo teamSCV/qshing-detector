@@ -28,7 +28,8 @@ public class ScanQR extends AppCompatActivity {
                 Toast.makeText(this, "Cancelled", Toast.LENGTH_LONG).show();
                 // todo
             } else {
-                Intent intent = new Intent(ScanQR.this, Inspection_results.class);      //찍힌 주소를 인텐트로 Inspection_results클래스로 전송시킴
+                Toast.makeText (this, "Scanned: " + result.getContents (), Toast.LENGTH_LONG).show ();
+                Intent intent = new Intent(getApplicationContext(), Inspection_results.class);      //찍힌 주소를 인텐트로 Inspection_results클래스로 전송시킴
                 intent.putExtra("link",result.getContents());
                 startActivity(intent);
                 // todo
