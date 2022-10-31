@@ -24,10 +24,14 @@ public class ScanQR extends AppCompatActivity {
         IntentResult result = IntentIntegrator.parseActivityResult(requestCode, resultCode, data);
         if(result != null) {
             if(result.getContents() == null) {
+
                 Toast.makeText(this, "Cancelled", Toast.LENGTH_LONG).show();
                 // todo
             } else {
-                Toast.makeText(this, "Scanned: " + result.getContents(), Toast.LENGTH_LONG).show();
+                Toast.makeText (this, "Scanned: " + result.getContents (), Toast.LENGTH_LONG).show ();
+                Intent intent = new Intent(getApplicationContext(), Inspection_results.class);      //찍힌 주소를 인텐트로 Inspection_results클래스로 전송시킴
+                intent.putExtra("link",result.getContents());
+                startActivity(intent);
                 // todo
             }
         } else {

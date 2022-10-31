@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/qr_link"
+        android:text="스캔 결과 링크는"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/scan_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="스캔 결과 링크는"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp" />
+
+    <View
+
+        android:layout_width="0dp"
+
+        android:layout_height="0dp"
+
+        android:layout_weight="1"
+
+        />
+
+    <Button
+        android:id="@+id/close"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="그만두기" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+
+        <Button
+            android:id="@+id/join_site"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="접속하기"
+            />
+        <View
+
+            android:layout_width="0dp"
+
+            android:layout_height="0dp"
+
+            android:layout_weight="1"
+
+            />
+    </LinearLayout>
+
+
+</LinearLayout>

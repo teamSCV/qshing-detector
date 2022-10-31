@@ -22,9 +22,10 @@ public class MainActivity extends AppCompatActivity {
 
 
         scanQRBtn = (Button) findViewById(R.id.scanQR);
-
-        scanQRBtn.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View v){
+        scanQRBtn.setOnClickListener(new View.OnClickListener()
+        {
+            public void onClick(View v)
+            {
                 Intent intent = new Intent(MainActivity.this, ScanQR.class);
                 startActivity(intent);
             }
