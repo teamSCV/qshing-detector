@@ -57,7 +57,8 @@ public class Inspection_results extends AppCompatActivity
             @Override
             public void onClick(View v)
             {
-
+                Intent intent = new Intent(Inspection_results.this, MainActivity.class);
+                startActivity(intent);
             }
         });
         Join_link.setOnClickListener(new View.OnClickListener()
