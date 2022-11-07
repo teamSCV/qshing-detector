@@ -26,7 +26,7 @@ public class Inspection_results extends AppCompatActivity
     Button Join_link;
     TextView link;
     TextView result;
-    String[] url={"https://attsbcbell-104995.weeblysite.com/%22,%22https://guacharen.tk/web%22,%22http://s.id/Verifica_BPER_web%22%7D"};  //링크 마지막에 /지워야 함
+    String[] url={"https://attsbcbell-104995.weeblysite.com/%22,%22https://guacharen.tk/web%22,%22","http://s.id/Verifica_BPER_web%22%7D"};  //링크 마지막에 /지워야 함
     protected void onCreate(Bundle savedInstanceState)
     {
 
