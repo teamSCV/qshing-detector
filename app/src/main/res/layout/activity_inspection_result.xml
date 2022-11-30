@@ -11,16 +11,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/qr_link"
-        android:text="스캔 결과 링크는"
-        android:textColor="#FFFFFF"
+        android:textColor="#000000"
         android:textSize="20sp" />
 
     <TextView
         android:id="@+id/scan_result"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="스캔 결과 링크는"
-        android:textColor="#FFFFFF"
+        android:textColor="#000000"
         android:textSize="20sp" />
 
     <View

@@ -38,4 +38,5 @@ public class ScanQR extends AppCompatActivity {
             super.onActivityResult(requestCode, resultCode, data);
         }
     }
+
 }

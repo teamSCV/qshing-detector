@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-
+import com.example.capstone2.Hash_Change_Link;
 import com.google.zxing.integration.android.IntentIntegrator;
 
 import org.w3c.dom.Text;
@@ -26,20 +26,28 @@ public class Inspection_results extends AppCompatActivity
     Button Join_link;
     TextView link;
     TextView result;
-    String[] url={"https://attsbcbell-104995.weeblysite.com","https://guacharen.tk/web"};  //링크 마지막에 /지워야 함
+    Hash_Change_Link L=new Hash_Change_Link();
+    String hashlink="";
+
+    String[] url={"https://attsbcbell-104995.weeblysite.com","https://guacharen.tk/web","http://s.id/Verifica_BPER_web"};  //링크 마지막에 /지워야 함
     protected void onCreate(Bundle savedInstanceState)
     {
 
         super.onCreate(savedInstanceState);
+
+
         setContentView(R.layout.activity_inspection_result);
         Intent intent = getIntent();
         String text=intent.getStringExtra("link");
 
         result=(TextView) findViewById(R.id.scan_result);
         link = (TextView) findViewById(R.id.qr_link) ;
+        hashlink=L.md5(text);
         QRscan_stop= (Button)findViewById(R.id.close);
         Join_link= (Button)findViewById(R.id.join_site);
-        link.setText("링크는"+text+"입니다.");
+        //link.setText((CharSequence) dbHelper.getResult());
+        link.setText("링크는"+link+"입니다.");
+
         for(int i=0;i<2;i++)
         {
             if(url[i].equals(text))
@@ -48,16 +56,15 @@ public class Inspection_results extends AppCompatActivity
                 break;
             }
             else
-            {
                 result.setText("해당 링크는 안전합니다.");
-            }
         }
         QRscan_stop.setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View v)
             {
-
+                Intent intent = new Intent(Inspection_results.this, MainActivity.class);
+                startActivity(intent);
             }
         });
         Join_link.setOnClickListener(new View.OnClickListener()
